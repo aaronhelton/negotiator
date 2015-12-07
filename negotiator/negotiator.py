@@ -382,15 +382,20 @@ class ContentNegotiator(object):
         self.weights = weights if weights is not None else {'content_type' : 1.0, 'language' : 1.0, 'charset' : 1.0, 'encoding' : 1.0, 'packaging' : 1.0}
         self.ignore_language_variants = ignore_language_variants
         
-        if not self.weights.has_key("content_type"):
+        #if not self.weights.has_key("content_type"):
+        if not "content_type" in self.weights:
             self.weights["content_type"] = 1.0
-        if not self.weights.has_key("language"):
+        #if not self.weights.has_key("language"):
+        if not "language" in self.weights:
             self.weights["language"] = 1.0
-        if not self.weights.has_key("charset"):
+        #if not self.weights.has_key("charset"):
+        if not "charset" in self.weights:
             self.weights["charset"] = 1.0
-        if not self.weights.has_key("encoding"):
+        #if not self.weights.has_key("encoding"):
+        if not "encoding" in self.weights:
             self.weights["encoding"] = 1.0
-        if not self.weights.has_key("packaging"):
+        #if not self.weights.has_key("packaging"):
+        if not "packaging" in self.weights:
             self.weights["packaging"] = 1.0
 
     def negotiate(self, accept=None, accept_language=None, accept_encoding=None, accept_charset=None, accept_packaging=None):
