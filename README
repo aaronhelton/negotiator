@@ -10,6 +10,7 @@ Negotiator offers a framework for making content negotiation decisions based on 
 
 NOTE it currently only formally supports Accept and Accept-Language, but it is a short haul to support for Accept-Charset and Accept-Encoding (TODO)
 
+This fork aims to add support for Pyton 3, hopefully without breaking Python 2 support.
 
 Basic Usage
 -----------
